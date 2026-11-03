@@ -44,9 +44,9 @@ import requests
 
 # ======================= UPDATE THESE ========================================
 # 1) PDF -> Markdown endpoint (CPU container) -- main entry point
-OCR_URL = "https://gautampatilwrites--baidu-ocr2-sglang-ocr2pdfapi-parse-pdf.us-east.modal.run"
+OCR_URL = "https://workspace--baidu-ocr2-sglang-ocr2pdfapi-parse-pdf.us-east.modal.run"
 # 2) Raw OpenAI-compatible SGLang server (GPU container) -- for direct use
-SERVER_URL = "https://gautampatilwrites--baidu-ocr2-sglang-ocr2sglangserver.us-east.modal.direct"
+SERVER_URL = "https://workspace--baidu-ocr2-sglang-ocr2sglangserver.us-east.modal.direct"
 
 PDF_PATH = "/Users/gaupatil/repos/GitHub/Security/modal-ocr-tts/test pdf.pdf"
 OUTPUT_PATH = "ocr-test-output.md"  # where the returned markdown is saved
