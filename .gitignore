@@ -1,0 +1,26 @@
+# dependencies
+node_modules/
+.pnp
+.pnp.js
+test.py
+
+# builds
+.next/
+out/
+build/
+dist/
+
+# env
+.env*
+!.env.example
+
+# misc
+.DS_Store
+*.log
+.turbo/
+.vercel
+coverage/
+
+# do not commit embedded-template build artifacts? we DO commit the generated
+# template module so the builder works without a prebuild step:
+# builder/src/export/generated-template.ts is intentionally committed.

@@ -1,0 +1,20 @@
+{
+  "name": "booklith",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Book Builder — turn a PDF book into an exportable, AI-powered book website. Bring your own keys; we host nothing.",
+  "license": "MIT",
+  "workspaces": [
+    "packages/*",
+    "template",
+    "builder"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace builder",
+    "dev:builder": "npm run dev --workspace builder",
+    "dev:reader": "npm run dev --workspace @booklith/reader",
+    "build": "npm run build --workspace builder",
+    "embed-template": "node scripts/embed-template.mjs",
+    "test": "npm test --workspace @booklith/core"
+  }
+}

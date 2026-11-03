@@ -1,0 +1,26 @@
+{
+  "name": "@booklith/builder",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Book Builder — the Booklith product: turn a PDF into an exportable book website. Bring your own keys; export runs in your browser.",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@booklith/core": "*",
+    "@booklith/reader": "*",
+    "fflate": "^0.8.2",
+    "msedge-tts": "^2.1.1",
+    "next": "^15.1.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/react": "^19.0.0",
+    "typescript": "^5.7.0"
+  }
+}

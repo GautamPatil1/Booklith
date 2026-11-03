@@ -1,0 +1,1 @@
+{"url": null, "note": "Optional default OmniVoice TTS endpoint; set by the Builder export. MODAL_TTS_URL env var overrides this at runtime."}
