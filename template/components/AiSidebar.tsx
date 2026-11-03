@@ -294,11 +294,21 @@ function TestTab({ book, previewMode }: { book: Book; previewMode?: boolean }) {
     setBusy(true);
     setError(null);
     try {
+      const chapter = book.chapters.find((item) => item.id === chapterId);
+      const paragraphs = chapter
+        ? chapter.blockIds.flatMap((id) => {
+            const block = book.blocks.find((item) => item.id === id);
+            return block?.type === "paragraph" ? [{ id: block.id, text: block.text.slice(0, 700) }] : [];
+          })
+        : [];
       const res = await fetch("/api/quiz", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ chapterId, count: 5 }),
+        body: JSON.stringify({ chapterId, chapterTitle: chapter?.title, paragraphs, count: 5 }),
       });
+      if (!res.headers.get("content-type")?.includes("application/json")) {
+        throw new Error(`Quiz API returned HTTP ${res.status} without JSON. Check that this deployment includes the quiz API route.`);
+      }
       const data = (await res.json()) as { questions?: QuizQuestion[]; error?: string };
       if (!res.ok || data.error) throw new Error(data.error || `HTTP ${res.status}`);
       const qs = data.questions ?? [];
