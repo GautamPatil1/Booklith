@@ -26,8 +26,8 @@ import time
 import requests
 
 # ======================= UPDATE THESE ========================================
-GET_URL = "https://gautampatilwrites--omnivoice-tts-omnivoicetts-tts.us-east.modal.run"
-CLONE_URL = "https://gautampatilwrites--omnivoice-tts-omnivoicetts-clone.us-east.modal.run"
+GET_URL = "https://workspace--omnivoice-tts-omnivoicetts-tts.us-east.modal.run"
+CLONE_URL = "https://workspace--omnivoice-tts-omnivoicetts-clone.us-east.modal.run"
 
 TEXT = "Hello! This is a test of OmniVoice running serverless on Modal. [laughter] It works!"
 INSTRUCT = "female, low pitch, british accent"   # voice-design description
